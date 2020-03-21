@@ -28,6 +28,39 @@
   --border-radius: 5px;
 }
 
+/* rewrite bootstrap colors */
+.btn-primary {
+  background: var(--button-primary-cta-background-color);
+  color: var(--button-primary-cta-text-color);
+  border: none;
+  transition: 0.2s;
+
+  &:hover {
+    background: var(--button-primary-cta-background-color-hover);
+    color: var(--button-primary-cta-text-color-hover);
+    transition: 0.2s;
+  }
+
+  &:active,
+  &:focus {
+    background: var(--button-primary-cta-background-color-active);
+    color: var(--button-primary-cta-text-color-active);
+    border: none;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: var(--button-primary-cta-background-color-disabled);
+    color: var(--button-primary-cta-text-color-disabled); 
+    border: none;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+
 #root {
   position: relative;
 }
